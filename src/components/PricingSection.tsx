@@ -2,46 +2,51 @@ import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
 
 const plans = [
-  { 
-    plan: "Starter", 
-    price: "$199/mo", 
-    description: "Up to 200 calls/month. Perfect for small businesses starting with AI.",
+  {
+    name: "Starter",
+    setup_fee: "$0",
+    monthly_fee: "$199",
+    included_minutes: 200,
+    extra_minute_cost: "$0.85/min",
     features: [
-      "200 calls per month",
-      "Basic call answering",
-      "Calendar integration",
-      "Email support",
-      "Standard voice"
+      "24/7 Booking & Answering",
+      "Rescheduling & Cancellations",
+      "Answer FAQs about your services",
+      "Integration with Google Calendar, Outlook, or Calendly",
+      "Custom Dashboard",
+      "Custom Call Script"
     ],
+    cta: { label: "Get Started", href: "/start" },
     popular: false
   },
-  { 
-    plan: "Pro", 
-    price: "$399/mo", 
-    description: "Up to 500 calls/month, CRM integration, and custom voice options.",
+  {
+    name: "Pro",
+    setup_fee: "$500",
+    monthly_fee: "$399",
+    included_minutes: 500,
+    extra_minute_cost: "$0.60/min",
     features: [
-      "500 calls per month",
-      "Advanced call handling",
-      "CRM integration",
-      "Custom voice options",
-      "Priority support",
-      "Analytics dashboard"
+      "Everything in Starter",
+      "Call Transcripts & Recordings",
+      "Automated Reminders (SMS/Email)",
+      "CRM Integrations (HubSpot, GoHighLevel, Pipedrive)"
     ],
+    cta: { label: "Get Started", href: "/start" },
     popular: true
   },
-  { 
-    plan: "Premium", 
-    price: "$799/mo", 
-    description: "Unlimited calls, multi-location support, advanced workflows, and VIP onboarding.",
+  {
+    name: "Premium",
+    setup_fee: "$1600",
+    monthly_fee: "$799",
+    included_minutes: 0,
+    extra_minute_cost: "$0.25/min",
     features: [
-      "Unlimited calls",
-      "Multi-location support",
-      "Advanced workflows",
-      "VIP onboarding",
-      "Dedicated account manager",
-      "Custom integrations",
-      "White-label options"
+      "Everything in Starter & Pro",
+      "Custom Workflows & Automations",
+      "Advanced FAQ & Lead Qualification",
+      "Dedicated Onboarding & SLA Support"
     ],
+    cta: { label: "Talk to Sales", href: "/book-demo" },
     popular: false
   }
 ];
@@ -53,11 +58,11 @@ const PricingSection = () => {
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold">
             <span className="bg-gradient-secondary bg-clip-text text-transparent">
-              Simple Pricing
+              Simple, Transparent Pricing for Your Business
             </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Choose the plan that fits your business size. All plans include setup and training.
+            No upfront fees for Starter. Predictable monthly costs. Start getting value immediately.
           </p>
         </div>
         
@@ -82,14 +87,25 @@ const PricingSection = () => {
               <div className="space-y-6">
                 <div className="text-center">
                   <h3 className="text-2xl font-bold text-foreground mb-2">
-                    {plan.plan}
+                    {plan.name}
                   </h3>
-                  <div className="text-4xl font-bold bg-gradient-primary bg-clip-text text-transparent mb-2">
-                    {plan.price}
+                  <div className="space-y-1 mb-4">
+                    <div className="text-sm text-muted-foreground">
+                      Setup: {plan.setup_fee}
+                    </div>
+                    <div className="text-4xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+                      {plan.monthly_fee}/mo
+                    </div>
+                    <div className="text-sm text-muted-foreground">
+                      {plan.included_minutes > 0 
+                        ? `${plan.included_minutes} minutes included`
+                        : 'Pay per minute'
+                      }
+                    </div>
+                    <div className="text-sm text-muted-foreground">
+                      Extra: {plan.extra_minute_cost}
+                    </div>
                   </div>
-                  <p className="text-muted-foreground">
-                    {plan.description}
-                  </p>
                 </div>
                 
                 <ul className="space-y-3">
@@ -107,8 +123,9 @@ const PricingSection = () => {
                   variant={plan.popular ? "cta" : "outline"} 
                   size="lg" 
                   className="w-full"
+                  onClick={() => window.location.href = plan.cta.href}
                 >
-                  Get Started
+                  {plan.cta.label}
                 </Button>
               </div>
             </div>
