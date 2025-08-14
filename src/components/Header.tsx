@@ -20,6 +20,9 @@ const Header = () => {
             <a href="#features" className="text-foreground hover:text-primary transition-smooth">
               Features
             </a>
+            <a href="#how-it-works" className="text-foreground hover:text-primary transition-smooth">
+              How it works
+            </a>
             <a href="#pricing" className="text-foreground hover:text-primary transition-smooth">
               Pricing
             </a>
