@@ -1,35 +1,47 @@
-import { Phone, Calendar, MessageSquare, Clock, Shield } from "lucide-react";
+import { Phone, Calendar, MessageSquare, Clock, Shield, FileText, Users, Bell } from "lucide-react";
 
 const features = [
   { 
-    title: "Instant Call Answering", 
-    description: "Your AI answers every call in seconds with a professional, friendly voice.",
+    title: "24/7 Call Answering", 
+    description: "Never miss a client inquiry, day or night.",
     icon: Phone,
     color: "text-primary"
   },
   { 
-    title: "Seamless Booking", 
-    description: "Integrates with Google, Outlook, or Calendly to book and confirm appointments instantly.",
+    title: "Live Appointment Booking", 
+    description: "Instantly books into your existing calendar or booking system — Google Calendar, Outlook, Calendly, or any platform you use.",
     icon: Calendar,
     color: "text-secondary"
   },
   { 
-    title: "Rescheduling & Reminders", 
-    description: "Handles cancellations and reschedules, and sends automated reminders to reduce no-shows.",
+    title: "Rescheduling & Cancellations", 
+    description: "Handles changes automatically without human intervention.",
     icon: Clock,
     color: "text-accent"
   },
   { 
-    title: "FAQ Handling", 
-    description: "Answers customer questions like hours, location, pricing, and services.",
+    title: "Customer Query Handling", 
+    description: "Answers common questions about your services, pricing, and availability automatically.",
     icon: MessageSquare,
     color: "text-primary"
   },
   { 
-    title: "24/7 Availability", 
-    description: "Works after hours, weekends, and holidays — never lose a lead to voicemail again.",
-    icon: Shield,
+    title: "Call Summaries", 
+    description: "Receive detailed call summaries including caller intent and follow-ups.",
+    icon: FileText,
     color: "text-secondary"
+  },
+  { 
+    title: "Multi-Location & Team Routing", 
+    description: "Automatically routes calls to the right team member or location for fast, accurate service.",
+    icon: Users,
+    color: "text-accent"
+  },
+  { 
+    title: "Automated Reminders", 
+    description: "Sends SMS/email reminders to reduce no-shows and keep your schedule full.",
+    icon: Bell,
+    color: "text-primary"
   }
 ];
 
@@ -40,7 +52,7 @@ const FeaturesSection = () => {
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold">
             <span className="bg-gradient-primary bg-clip-text text-transparent">
-              Powerful Features
+              Top Features
             </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
