@@ -2,45 +2,43 @@ import { DollarSign, Clock, Users, Zap } from "lucide-react";
 
 const points = [
   {
-    title: "Cheaper than a receptionist",
-    description: "Save thousands per month.",
+    title: "Cost Effective",
+    description: "Cheaper than hiring a receptionist",
     icon: DollarSign,
     stat: "$5,000+",
     statLabel: "Monthly savings"
   },
   {
-    title: "Always available",
-    description: "No lunch breaks, no sick days.",
+    title: "Always Available",
+    description: "24/7 coverage with no breaks",
     icon: Clock,
     stat: "24/7",
     statLabel: "Availability"
   },
   {
-    title: "Custom to your business",
-    description: "Sounds like you, follows your process.",
+    title: "Customized",
+    description: "Tailored to your business needs",
     icon: Users,
     stat: "100%",
-    statLabel: "Customized"
+    statLabel: "Custom"
   },
   {
-    title: "Fast setup",
-    description: "AI answering calls in under 48 hours.",
+    title: "Quick Setup",
+    description: "Live in under 48 hours",
     icon: Zap,
     stat: "48hrs",
-    statLabel: "Setup time"
+    statLabel: "Setup"
   }
 ];
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-24 bg-gradient-to-b from-muted/20 to-background">
+    <section className="py-20 bg-muted/50">
       <div className="container mx-auto px-6">
-        <div className="text-center space-y-4 mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold">
-            Why Choose <span className="bg-gradient-hero bg-clip-text text-transparent">Belio AI</span>
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            The smartest investment you'll make for your business growth
+        <div className="text-center mb-16">
+          <h2 className="text-3xl lg:text-4xl font-bold mb-4">Why Belio AI</h2>
+          <p className="text-lg text-muted-foreground">
+            The smart choice for business growth
           </p>
         </div>
         
@@ -48,31 +46,19 @@ const AboutSection = () => {
           {points.map((point, index) => {
             const IconComponent = point.icon;
             return (
-              <div 
-                key={index}
-                className="text-center space-y-4 group"
-              >
-                <div className="relative mx-auto w-20 h-20 bg-gradient-card rounded-2xl flex items-center justify-center shadow-elegant group-hover:shadow-primary transition-all duration-300">
+              <div key={index} className="text-center space-y-4">
+                <div className="mx-auto w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center">
                   <IconComponent className="w-8 h-8 text-primary" />
-                  <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-10 rounded-2xl transition-opacity duration-300"></div>
+                </div>
+                
+                <div className="space-y-1">
+                  <div className="text-2xl font-bold">{point.stat}</div>
+                  <div className="text-sm text-muted-foreground">{point.statLabel}</div>
                 </div>
                 
                 <div className="space-y-2">
-                  <div className="text-3xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-                    {point.stat}
-                  </div>
-                  <div className="text-sm text-muted-foreground">
-                    {point.statLabel}
-                  </div>
-                </div>
-                
-                <div className="space-y-2">
-                  <h3 className="text-lg font-semibold text-foreground">
-                    {point.title}
-                  </h3>
-                  <p className="text-muted-foreground">
-                    {point.description}
-                  </p>
+                  <h3 className="font-semibold">{point.title}</h3>
+                  <p className="text-sm text-muted-foreground">{point.description}</p>
                 </div>
               </div>
             );
