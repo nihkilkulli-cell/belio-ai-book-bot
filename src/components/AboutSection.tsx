@@ -42,6 +42,9 @@ const AboutSection = () => {
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             The smartest investment you'll make for your business growth
           </p>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto mt-6">
+            Founded in Canada, Belio AI delivers 24/7 AI-powered reception for small and medium businesses across North America. Our intelligent voice assistant answers calls, books appointments, handles reschedules, and sends reminders, fully integrated with your existing systems. No matter where your business operates, we make every call count.
+          </p>
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
