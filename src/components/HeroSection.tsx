@@ -10,24 +10,26 @@ const HeroSection = () => {
             <div className="space-y-6">
               <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
                 <span className="bg-gradient-hero bg-clip-text text-transparent">
-                  Never Miss
+                  Never Miss a Call.
                 </span>
                 <br />
                 <span className="text-foreground">
-                  a Booking Again
+                  Book More Clients. No Upfront Fees.
                 </span>
               </h1>
               
               <p className="text-xl text-muted-foreground leading-relaxed max-w-lg">
-                Belio AI gives you a 24/7 AI receptionist that answers calls, books appointments, 
-                and grows your business while you sleep.
+                Belio AI answers every call 24/7, books appointments instantly, handles reschedules, 
+                and sends reminders with zero upfront fees. Get set up in 48 hours and pay only 20¢ per minute during your trial.
               </p>
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="cta" size="xl" className="group">
-                Get Started Today
-                <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+              <Button variant="cta" size="xl" className="group" asChild>
+                <a href="https://belio.ai/start-trial" target="_blank" rel="noopener noreferrer">
+                  Start Your 20¢/Minute Free Trial
+                  <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+                </a>
               </Button>
               <Button variant="outline" size="xl">
                 Watch Demo
