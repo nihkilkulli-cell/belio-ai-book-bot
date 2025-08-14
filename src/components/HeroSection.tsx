@@ -47,31 +47,37 @@ const HeroSection = () => {
           </div>
           
           <div className="relative">
-            <div className="bg-gradient-card rounded-2xl overflow-hidden shadow-elegant">
-              <div style={{ position: 'relative', overflow: 'hidden', paddingTop: '56.25%' }}>
-                <iframe 
-                  src="https://share.synthesia.io/embeds/videos/0255b7a9-8076-48eb-9c28-036f27b37409" 
-                  loading="lazy" 
-                  title="Belio AI Demo - See how our AI receptionist works" 
-                  allowFullScreen 
-                  allow="encrypted-media; fullscreen;" 
-                  style={{ 
-                    position: 'absolute', 
-                    width: '100%', 
-                    height: '100%', 
-                    top: 0, 
-                    left: 0, 
-                    border: 'none', 
-                    padding: 0, 
-                    margin: 0, 
-                    overflow: 'hidden' 
-                  }}
-                />
-              </div>
-              <div className="p-6">
-                <p className="text-center text-sm text-muted-foreground">
-                  Watch Belio AI in action - answering calls and booking appointments automatically
-                </p>
+            <div className="bg-gradient-card rounded-2xl p-8 shadow-elegant">
+              <div className="space-y-6">
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center">
+                    <Phone className="w-6 h-6 text-primary-foreground" />
+                  </div>
+                  <div>
+                    <p className="font-semibold">Incoming Call</p>
+                    <p className="text-sm text-muted-foreground">Customer booking appointment</p>
+                  </div>
+                </div>
+                
+                <div className="space-y-3">
+                  <div className="flex items-center gap-2 text-sm">
+                    <Clock className="w-4 h-4 text-primary" />
+                    <span>Response time: 2 seconds</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm">
+                    <Calendar className="w-4 h-4 text-secondary" />
+                    <span>Appointment booked automatically</span>
+                  </div>
+                </div>
+                
+                <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                  <p className="text-sm text-green-700 font-medium">
+                    ✓ Appointment confirmed for Tuesday 2pm
+                  </p>
+                  <p className="text-sm text-green-600">
+                    Calendar updated, confirmation sent
+                  </p>
+                </div>
               </div>
             </div>
             

@@ -17,7 +17,7 @@ const plans = [
   },
   { 
     plan: "Pro", 
-    price: "$499/mo", 
+    price: "$399/mo", 
     description: "Up to 500 calls/month, CRM integration, and custom voice options.",
     features: [
       "500 calls per month",
