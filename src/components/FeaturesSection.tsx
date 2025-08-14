@@ -9,7 +9,7 @@ const features = [
   },
   { 
     title: "Live Appointment Booking", 
-    description: "Instantly books into your existing calendar or booking system — Google Calendar, Outlook, Calendly, or any platform you use.",
+    description: "Instantly books into your existing calendar or booking system like Google Calendar, Outlook, Calendly, or any platform you use.",
     icon: Calendar,
     color: "text-secondary"
   },
