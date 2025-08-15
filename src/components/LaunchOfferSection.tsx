@@ -3,7 +3,7 @@ import { Gift, Clock } from "lucide-react";
 
 const LaunchOfferSection = () => {
   return (
-    <section className="py-24 bg-gradient-hero">
+    <section id="launch-offer" className="py-24 bg-gradient-hero">
       <div className="container mx-auto px-6">
         <div className="bg-background/95 backdrop-blur-sm rounded-3xl p-12 shadow-2xl border border-primary/20">
           <div className="text-center space-y-8 max-w-4xl mx-auto">
