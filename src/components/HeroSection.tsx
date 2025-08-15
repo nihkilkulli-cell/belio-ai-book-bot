@@ -1,9 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Phone, Clock, Calendar } from "lucide-react";
-
 const HeroSection = () => {
-  return (
-    <section className="min-h-screen flex items-center pt-20 bg-gradient-to-br from-background via-muted/20 to-secondary/10">
+  return <section className="min-h-screen flex items-center pt-20 bg-gradient-to-br from-background via-muted/20 to-secondary/10">
       <div className="container mx-auto px-6 py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
@@ -26,12 +24,10 @@ const HeroSection = () => {
             
             <div className="flex flex-col sm:flex-row gap-4">
               <Button variant="cta" size="xl" className="group">
-                Start Your 14-Day Free Trial Today
+                Get Started Today
                 <ArrowRight className="group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button variant="outline" size="xl">
-                Watch Demo
-              </Button>
+              
             </div>
             
             <div className="flex items-center gap-6 pt-4">
@@ -87,8 +83,6 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
