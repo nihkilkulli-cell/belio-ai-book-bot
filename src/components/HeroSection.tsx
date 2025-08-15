@@ -24,7 +24,7 @@ const HeroSection = () => {
             
             <div className="flex flex-col sm:flex-row gap-4">
               <Button variant="cta" size="xl" className="group">
-                Get Started Today
+                Start Your 14-Day Free Trial Today
                 <ArrowRight className="group-hover:translate-x-1 transition-transform" />
               </Button>
               
