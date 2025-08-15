@@ -26,7 +26,7 @@ const steps = [
 
 const HowItWorksSection = () => {
   return (
-    <section className="py-24 bg-gradient-to-br from-secondary/5 via-background to-primary/5">
+    <section id="how-it-works" className="py-24 bg-gradient-to-br from-secondary/5 via-background to-primary/5">
       <div className="container mx-auto px-6">
         <div className="text-center space-y-4 mb-20">
           <h2 className="text-4xl lg:text-5xl font-bold">
