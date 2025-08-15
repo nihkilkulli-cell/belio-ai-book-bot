@@ -103,7 +103,7 @@ const PricingSection = () => {
                       }
                     </div>
                     <div className="text-sm text-muted-foreground">
-                      Extra: {plan.extra_minute_cost}
+                      {plan.extra_minute_cost}
                     </div>
                   </div>
                 </div>
