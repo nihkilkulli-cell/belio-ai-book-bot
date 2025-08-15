@@ -46,7 +46,7 @@ const plans = [
       "Advanced FAQ & Lead Qualification",
       "Dedicated Onboarding & SLA Support"
     ],
-    cta: { label: "Talk to Sales", href: "/book-demo" },
+    cta: { label: "Get Started", href: "/book-demo" },
     popular: true
   }
 ];
