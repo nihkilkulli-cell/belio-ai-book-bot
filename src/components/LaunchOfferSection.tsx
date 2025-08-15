@@ -14,42 +14,42 @@ const LaunchOfferSection = () => {
             
             <h2 className="text-4xl lg:text-6xl font-bold">
               <span className="bg-gradient-primary bg-clip-text text-transparent">
-                Special Launch Offer
+                Try Belio AI Risk-Free for 14 Days!
               </span>
             </h2>
             
             <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-              Sign up this month and get your <strong>first 2 weeks free</strong> + 
-              free call script customization (a $250 value).
+              Experience the power of AI booking and answering, and see the value in action.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <div className="bg-card rounded-2xl p-6 shadow-elegant border border-border/50">
-                <div className="flex items-center gap-3">
-                  <Clock className="w-6 h-6 text-secondary" />
-                  <div className="text-left">
-                    <div className="font-semibold text-foreground">2 Weeks Free</div>
-                    <div className="text-sm text-muted-foreground">No commitment required</div>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="text-2xl font-bold text-primary">+</div>
-              
-              <div className="bg-card rounded-2xl p-6 shadow-elegant border border-border/50">
-                <div className="flex items-center gap-3">
-                  <Gift className="w-6 h-6 text-primary" />
-                  <div className="text-left">
-                    <div className="font-semibold text-foreground">Free Setup ($250)</div>
-                    <div className="text-sm text-muted-foreground">Custom script included</div>
-                  </div>
-                </div>
-              </div>
+            <div className="bg-card rounded-2xl p-8 shadow-elegant border border-border/50 max-w-2xl mx-auto">
+              <ul className="space-y-4 text-left">
+                <li className="flex items-start gap-3">
+                  <Gift className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                  <span className="text-foreground">100 Free Minutes included in the trial</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Gift className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                  <span className="text-foreground">Pay only $0.25 per minute after the free minutes</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Gift className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                  <span className="text-foreground">No setup fee required</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Gift className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                  <span className="text-foreground">Complimentary Onboarding Call with our specialist</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Gift className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                  <span className="text-foreground">After the trial, enjoy Discounted Premium Support for $599/month for the first 3 months (regular $799/month)</span>
+                </li>
+              </ul>
             </div>
             
             <div className="pt-6">
               <Button variant="cta" size="xl" className="text-lg">
-                Claim Your Free Trial
+                Book Your Free Demo Today
               </Button>
               <p className="text-sm text-muted-foreground mt-3">
                 No credit card required • Setup in 48 hours
