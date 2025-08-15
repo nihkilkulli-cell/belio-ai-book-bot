@@ -29,6 +29,9 @@ const Header = () => {
             <a href="#about" className="text-foreground hover:text-primary transition-smooth">
               About
             </a>
+            <a href="#contact" className="text-foreground hover:text-primary transition-smooth">
+              Contact
+            </a>
           </nav>
           
           <div className="flex items-center space-x-4">
