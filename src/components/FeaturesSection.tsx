@@ -32,12 +32,6 @@ const features = [
     color: "text-secondary"
   },
   { 
-    title: "Multi-Location & Team Routing", 
-    description: "Automatically routes calls to the right team member or location for fast, accurate service.",
-    icon: Users,
-    color: "text-accent"
-  },
-  { 
     title: "Automated Reminders", 
     description: "Sends SMS/email reminders to reduce no-shows and keep your schedule full.",
     icon: Bell,
