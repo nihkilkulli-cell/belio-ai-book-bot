@@ -32,7 +32,7 @@ const plans = [
       "CRM Integrations (HubSpot, GoHighLevel, Pipedrive)"
     ],
     cta: { label: "Get Started", href: "/start" },
-    popular: true
+    popular: false
   },
   {
     name: "Premium",
@@ -47,7 +47,7 @@ const plans = [
       "Dedicated Onboarding & SLA Support"
     ],
     cta: { label: "Talk to Sales", href: "/book-demo" },
-    popular: false
+    popular: true
   }
 ];
 
