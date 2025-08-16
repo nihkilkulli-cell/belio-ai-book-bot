@@ -28,7 +28,7 @@ const plans = [{
   popular: false
 }, {
   name: "Premium",
-  tagline: "Best Value — Built for Scaling",
+  tagline: "All-in-One Solution",
   setup_fee: "$1600",
   monthly_fee: "$799/mo",
   included_minutes: "Pay-as-you-go",
