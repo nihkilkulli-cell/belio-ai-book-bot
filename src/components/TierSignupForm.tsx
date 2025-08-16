@@ -145,12 +145,12 @@ const TierSignupForm = ({ tier, open, onOpenChange }: TierSignupFormProps) => {
             </span>
           </DialogTitle>
           <DialogDescription className="space-y-2">
-            <div className="text-lg font-medium text-foreground">
+            <span className="text-lg font-medium text-foreground block">
               {selectedTier.tagline} • {selectedTier.price}
-            </div>
-            <div className="text-muted-foreground">
+            </span>
+            <span className="text-muted-foreground block">
               {selectedTier.features}
-            </div>
+            </span>
           </DialogDescription>
         </DialogHeader>
 
