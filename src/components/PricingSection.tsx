@@ -52,7 +52,7 @@ const PricingSection = () => {
       <div className="container mx-auto px-6">
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold">
-            <span className="bg-gradient-secondary bg-clip-text text-transparent">
+            <span className="bg-gradient-primary bg-clip-text text-transparent">
               Simple, Transparent Pricing for Your Business
             </span>
           </h2>

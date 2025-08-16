@@ -37,7 +37,7 @@ const AboutSection = () => {
       <div className="container mx-auto px-6">
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold">
-            Why Choose <span className="bg-gradient-hero bg-clip-text text-transparent">Belio AI</span>
+            Why Choose <span className="bg-gradient-primary bg-clip-text text-transparent">Belio AI</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             The smartest investment you'll make for your business growth
