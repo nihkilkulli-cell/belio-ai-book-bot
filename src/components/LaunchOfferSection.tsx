@@ -1,7 +1,11 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Gift, Clock } from "lucide-react";
+import { TrialSignUpForm } from "./TrialSignUpForm";
 
 const LaunchOfferSection = () => {
+  const [isTrialFormOpen, setIsTrialFormOpen] = useState(false);
+
   return (
     <section id="launch-offer" className="py-24 bg-gradient-hero">
       <div className="container mx-auto px-6">
@@ -48,7 +52,12 @@ const LaunchOfferSection = () => {
             </div>
             
             <div className="pt-6">
-              <Button variant="cta" size="xl" className="text-lg">
+              <Button 
+                variant="cta" 
+                size="xl" 
+                className="text-lg"
+                onClick={() => setIsTrialFormOpen(true)}
+              >
                 Book Your Free Demo Today
               </Button>
               <p className="text-sm text-muted-foreground mt-3">
@@ -58,6 +67,11 @@ const LaunchOfferSection = () => {
           </div>
         </div>
       </div>
+
+      <TrialSignUpForm
+        open={isTrialFormOpen}
+        onOpenChange={setIsTrialFormOpen}
+      />
     </section>
   );
 };
