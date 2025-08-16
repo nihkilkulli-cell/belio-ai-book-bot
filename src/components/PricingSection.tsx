@@ -18,7 +18,7 @@ const plans = [{
   tagline: "All-in-One Solution",
   setup_fee: "$500",
   monthly_fee: "$399/mo",
-  included_minutes: "500 minutes",
+  included_minutes: "Pay-as-you-go",
   extra_minute_cost: "$0.60/min",
   features: ["Everything in Starter", "Custom Dashboard", "SMS/Email Reminders", "Call Transcripts & Recordings"],
   cta: {
