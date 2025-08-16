@@ -4,49 +4,49 @@ import { Check } from "lucide-react";
 const plans = [
   {
     name: "Starter",
+    tagline: "Just the Basics",
     setup_fee: "$0",
-    monthly_fee: "$199",
-    included_minutes: 200,
+    monthly_fee: "$199/mo",
+    included_minutes: "200 minutes",
     extra_minute_cost: "$0.85/min",
     features: [
-      "24/7 Booking & Answering",
-      "Rescheduling & Cancellations",
-      "Answer FAQs about your services",
-      "Integration with Google Calendar, Outlook, or Calendly",
-      "Custom Dashboard",
-      "Custom Call Script"
+      "24/7 Call Answering & Booking",
+      "Calendar Integration",
+      "Answer FAQs about your services"
     ],
-    cta: { label: "Get Started", href: "/start" },
+    cta: { label: "Get Started", href: "/signup/starter" },
     popular: false
   },
   {
     name: "Pro",
+    tagline: "For Growing Teams",
     setup_fee: "$500",
-    monthly_fee: "$399",
-    included_minutes: 500,
+    monthly_fee: "$399/mo",
+    included_minutes: "500 minutes",
     extra_minute_cost: "$0.60/min",
     features: [
       "Everything in Starter",
-      "Call Transcripts & Recordings",
-      "Automated Reminders (SMS/Email)",
-      "CRM Integrations (HubSpot, GoHighLevel, Pipedrive)"
+      "Custom Dashboard",
+      "SMS/Email Reminders",
+      "Call Transcripts & Recordings"
     ],
-    cta: { label: "Get Started", href: "/start" },
+    cta: { label: "Get Started", href: "/signup/pro" },
     popular: false
   },
   {
     name: "Premium",
+    tagline: "Best Value — Built for Scaling",
     setup_fee: "$1600",
-    monthly_fee: "$799",
-    included_minutes: 0,
+    monthly_fee: "$799/mo",
+    included_minutes: "Pay-as-you-go",
     extra_minute_cost: "$0.25/min",
     features: [
-      "Everything in Starter & Pro",
-      "Custom Workflows & Automations",
-      "Advanced FAQ & Lead Qualification",
-      "Dedicated Onboarding & SLA Support"
+      "Everything in Pro",
+      "Rescheduling & Cancellations",
+      "CRM Integrations (HubSpot, GoHighLevel, ServiceTitan etc)",
+      "Dedicated Account Manager & SLA Support"
     ],
-    cta: { label: "Get Started", href: "/book-demo" },
+    cta: { label: "Get Premium", href: "/signup/premium" },
     popular: true
   }
 ];
@@ -86,21 +86,21 @@ const PricingSection = () => {
               
               <div className="space-y-6">
                 <div className="text-center">
-                  <h3 className="text-2xl font-bold text-foreground mb-2">
+                  <h3 className="text-2xl font-bold text-foreground mb-1">
                     {plan.name}
                   </h3>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    {plan.tagline}
+                  </p>
                   <div className="space-y-1 mb-4">
                     <div className="text-sm text-muted-foreground">
                       Setup: {plan.setup_fee}
                     </div>
                     <div className="text-4xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-                      {plan.monthly_fee}/mo
+                      {plan.monthly_fee}
                     </div>
                     <div className="text-sm text-muted-foreground">
-                      {plan.included_minutes > 0 
-                        ? `${plan.included_minutes} minutes included`
-                        : 'Pay per minute'
-                      }
+                      {plan.included_minutes}
                     </div>
                     <div className="text-sm text-muted-foreground">
                       {plan.extra_minute_cost}
