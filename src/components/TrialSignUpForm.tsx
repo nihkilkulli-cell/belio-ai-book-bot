@@ -132,7 +132,7 @@ export const TrialSignUpForm = ({ open, onOpenChange }: TrialSignUpFormProps) =>
             </Label>
             <Input
               id="businessWebsite"
-              type="url"
+              type="text"
               value={formData.businessWebsite}
               onChange={(e) => handleInputChange("businessWebsite", e.target.value)}
               placeholder="https://yourbusiness.com"
