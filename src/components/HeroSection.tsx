@@ -11,47 +11,8 @@ const HeroSection = () => {
         open={isTrialFormOpen} 
         onOpenChange={setIsTrialFormOpen} 
       />
-      <section className="relative min-h-screen flex items-center pt-20 bg-gradient-to-br from-background via-muted/20 to-secondary/10 overflow-hidden">
-        {/* Voice AI Background Elements */}
-        <div className="absolute inset-0 pointer-events-none">
-          {/* Sound wave pattern */}
-          <div className="absolute top-1/4 left-10 w-32 h-1 bg-gradient-primary/20 rounded-full animate-pulse"></div>
-          <div className="absolute top-1/4 left-14 w-24 h-1 bg-gradient-primary/30 rounded-full animate-pulse" style={{animationDelay: '0.5s'}}></div>
-          <div className="absolute top-1/4 left-16 w-40 h-1 bg-gradient-primary/15 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
-          
-          {/* AI nodes/connections */}
-          <div className="absolute top-1/3 right-20 w-3 h-3 bg-secondary rounded-full animate-pulse"></div>
-          <div className="absolute top-1/2 right-32 w-2 h-2 bg-primary/60 rounded-full animate-pulse" style={{animationDelay: '0.7s'}}></div>
-          <div className="absolute top-2/3 right-24 w-4 h-4 bg-accent/40 rounded-full animate-pulse" style={{animationDelay: '1.2s'}}></div>
-          
-          {/* Connection lines */}
-          <svg className="absolute top-1/3 right-16 w-32 h-32 opacity-10" viewBox="0 0 100 100">
-            <path d="M20,20 Q50,10 80,40 Q70,70 40,80 Q10,50 20,20" stroke="url(#voiceGradient)" strokeWidth="1" fill="none" strokeDasharray="2,2">
-              <animate attributeName="stroke-dashoffset" values="0;4" dur="2s" repeatCount="indefinite"/>
-            </path>
-            <defs>
-              <linearGradient id="voiceGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="hsl(263 85% 55%)" stopOpacity="0.3"/>
-                <stop offset="100%" stopColor="hsl(197 85% 65%)" stopOpacity="0.3"/>
-              </linearGradient>
-            </defs>
-          </svg>
-          
-          {/* Floating voice indicators */}
-          <div className="absolute bottom-1/4 left-1/4 w-6 h-6 bg-gradient-primary/20 rounded-full animate-bounce" style={{animationDelay: '0.3s'}}></div>
-          <div className="absolute bottom-1/3 left-1/3 w-4 h-4 bg-gradient-secondary/25 rounded-full animate-bounce" style={{animationDelay: '0.8s'}}></div>
-          
-          {/* Microphone wave pattern */}
-          <div className="absolute bottom-20 right-1/4 flex items-end gap-1">
-            <div className="w-1 h-4 bg-primary/30 rounded animate-pulse"></div>
-            <div className="w-1 h-8 bg-primary/40 rounded animate-pulse" style={{animationDelay: '0.2s'}}></div>
-            <div className="w-1 h-6 bg-primary/35 rounded animate-pulse" style={{animationDelay: '0.4s'}}></div>
-            <div className="w-1 h-10 bg-primary/45 rounded animate-pulse" style={{animationDelay: '0.6s'}}></div>
-            <div className="w-1 h-5 bg-primary/30 rounded animate-pulse" style={{animationDelay: '0.8s'}}></div>
-          </div>
-        </div>
-        
-      <div className="container mx-auto px-6 py-20 relative z-10">
+      <section className="min-h-screen flex items-center pt-20 bg-gradient-to-br from-background via-muted/20 to-secondary/10">
+      <div className="container mx-auto px-6 py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
             <div className="space-y-6">
