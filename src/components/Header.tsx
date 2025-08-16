@@ -30,9 +30,7 @@ const Header = () => {
           
           <div className="flex items-center space-x-4">
             
-            <Button variant="cta" size="lg">
-              Get Started
-            </Button>
+            
           </div>
         </div>
       </div>
