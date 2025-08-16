@@ -4,7 +4,7 @@ import { Check } from "lucide-react";
 const plans = [
   {
     name: "Starter",
-    tagline: "Just the Basics",
+    tagline: "Essentials",
     setup_fee: "$0",
     monthly_fee: "$199/mo",
     included_minutes: "200 minutes",
