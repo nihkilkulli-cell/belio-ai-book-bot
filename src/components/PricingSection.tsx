@@ -5,8 +5,8 @@ const plans = [{
   tagline: "Essentials",
   setup_fee: "$0",
   monthly_fee: "$199/mo",
-  included_minutes: "Pay-as-you-go",
-  extra_minute_cost: "$0.85/min",
+  included_minutes: "150 minutes included",
+  extra_minute_cost: "$0.85/min after",
   features: ["24/7 Call Answering & Booking", "Calendar Integration", "Answer FAQs about your services"],
   cta: {
     label: "Get Started",
@@ -18,8 +18,8 @@ const plans = [{
   tagline: "Growth Tools",
   setup_fee: "$500",
   monthly_fee: "$399/mo",
-  included_minutes: "150 minutes included",
-  extra_minute_cost: "$0.60/min",
+  included_minutes: "300 minutes included",
+  extra_minute_cost: "$0.60/min after",
   features: ["Everything in Starter", "Custom Dashboard", "SMS/Email Reminders", "Call Transcripts & Recordings"],
   cta: {
     label: "Get Started",
