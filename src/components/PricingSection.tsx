@@ -19,7 +19,7 @@ const plans = [
   },
   {
     name: "Pro",
-    tagline: "For Growing Teams",
+    tagline: "All-in-One Solution",
     setup_fee: "$500",
     monthly_fee: "$399/mo",
     included_minutes: "500 minutes",
