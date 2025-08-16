@@ -1,9 +1,7 @@
 import { Mail, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
 const ContactSection = () => {
-  return (
-    <section id="contact" className="py-24 bg-background border-t border-border">
+  return <section id="contact" className="py-24 bg-background border-t border-border">
       <div className="container mx-auto px-6">
         <div className="text-center space-y-6 max-w-3xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-primary bg-clip-text text-transparent">
@@ -19,10 +17,7 @@ const ContactSection = () => {
                 <Mail className="w-8 h-8 text-primary" />
               </div>
               <h3 className="text-xl font-semibold">Email Us</h3>
-              <a 
-                href="mailto:abishai@belio.ai" 
-                className="text-primary hover:text-primary/80 transition-smooth font-medium"
-              >
+              <a href="mailto:abishai@belio.ai" className="text-primary hover:text-primary/80 transition-smooth font-medium">
                 abishai@belio.ai
               </a>
             </div>
@@ -40,15 +35,11 @@ const ContactSection = () => {
           
           <div className="mt-12">
             <Button variant="cta" size="lg" asChild>
-              <a href="mailto:abishai@belio.ai">
-                Get in Touch
-              </a>
+              
             </Button>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ContactSection;
