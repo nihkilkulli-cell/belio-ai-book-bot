@@ -8,6 +8,8 @@ import { useToast } from "@/hooks/use-toast";
 
 interface TierSignupFormProps {
   tier: "starter" | "pro" | "premium";
+  open: boolean;
+  onOpenChange: (open: boolean) => void;
 }
 
 const tierInfo = {
@@ -31,7 +33,7 @@ const tierInfo = {
   }
 };
 
-const TierSignupForm = ({ tier }: TierSignupFormProps) => {
+const TierSignupForm = ({ tier, open, onOpenChange }: TierSignupFormProps) => {
   const { toast } = useToast();
   const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({
@@ -111,7 +113,7 @@ const TierSignupForm = ({ tier }: TierSignupFormProps) => {
         description: "We'll contact you within 24 hours to get you started.",
       });
 
-      // Reset form
+      // Reset form and close modal
       setFormData({
         name: "",
         businessName: "",
@@ -120,6 +122,7 @@ const TierSignupForm = ({ tier }: TierSignupFormProps) => {
         phone: "",
         bookingSystem: ""
       });
+      onOpenChange(false);
     } catch (error) {
       console.error("Webhook error:", error);
       toast({
@@ -133,120 +136,120 @@ const TierSignupForm = ({ tier }: TierSignupFormProps) => {
   };
 
   return (
-    <div className="min-h-screen bg-background py-24">
-      <div className="container mx-auto px-6 max-w-2xl">
-        <div className="text-center space-y-4 mb-12">
-          <h1 className="text-4xl lg:text-5xl font-bold">
+    <Dialog open={open} onOpenChange={onOpenChange}>
+      <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
+        <DialogHeader>
+          <DialogTitle className="text-2xl">
             <span className="bg-gradient-secondary bg-clip-text text-transparent">
               Get Started with {selectedTier.name}
             </span>
-          </h1>
-          <p className="text-xl text-muted-foreground">
-            {selectedTier.tagline} • {selectedTier.price}
-          </p>
-          <p className="text-lg text-muted-foreground">
-            {selectedTier.features}
-          </p>
-        </div>
-
-        <div className="bg-card rounded-2xl p-8 border shadow-elegant">
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="grid md:grid-cols-2 gap-4">
-              <div className="space-y-2">
-                <Label htmlFor="name">Full Name *</Label>
-                <Input
-                  id="name"
-                  type="text"
-                  value={formData.name}
-                  onChange={(e) => handleInputChange("name", e.target.value)}
-                  placeholder="John Doe"
-                  required
-                />
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="businessName">Business Name *</Label>
-                <Input
-                  id="businessName"
-                  type="text"
-                  value={formData.businessName}
-                  onChange={(e) => handleInputChange("businessName", e.target.value)}
-                  placeholder="Your Business Name"
-                  required
-                />
-              </div>
+          </DialogTitle>
+          <DialogDescription className="space-y-2">
+            <div className="text-lg font-medium text-foreground">
+              {selectedTier.tagline} • {selectedTier.price}
             </div>
+            <div className="text-muted-foreground">
+              {selectedTier.features}
+            </div>
+          </DialogDescription>
+        </DialogHeader>
 
+        <form onSubmit={handleSubmit} className="space-y-6">
+          <div className="grid md:grid-cols-2 gap-4">
             <div className="space-y-2">
-              <Label htmlFor="website">Business Website</Label>
+              <Label htmlFor="name">Full Name *</Label>
               <Input
-                id="website"
-                type="url"
-                value={formData.website}
-                onChange={(e) => handleInputChange("website", e.target.value)}
-                placeholder="https://yourbusiness.com"
+                id="name"
+                type="text"
+                value={formData.name}
+                onChange={(e) => handleInputChange("name", e.target.value)}
+                placeholder="John Doe"
+                required
               />
             </div>
-
-            <div className="grid md:grid-cols-2 gap-4">
-              <div className="space-y-2">
-                <Label htmlFor="email">Email Address *</Label>
-                <Input
-                  id="email"
-                  type="email"
-                  value={formData.email}
-                  onChange={(e) => handleInputChange("email", e.target.value)}
-                  placeholder="john@business.com"
-                  required
-                />
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="phone">Phone Number *</Label>
-                <Input
-                  id="phone"
-                  type="tel"
-                  value={formData.phone}
-                  onChange={(e) => handleInputChange("phone", e.target.value)}
-                  placeholder="+1 (555) 123-4567"
-                  required
-                />
-              </div>
-            </div>
-
             <div className="space-y-2">
-              <Label htmlFor="bookingSystem">Current Booking System</Label>
-              <Select value={formData.bookingSystem} onValueChange={(value) => handleInputChange("bookingSystem", value)}>
-                <SelectTrigger>
-                  <SelectValue placeholder="Select your current booking system" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="google-calendar">Google Calendar</SelectItem>
-                  <SelectItem value="outlook">Outlook Calendar</SelectItem>
-                  <SelectItem value="calendly">Calendly</SelectItem>
-                  <SelectItem value="acuity">Acuity Scheduling</SelectItem>
-                  <SelectItem value="square">Square Appointments</SelectItem>
-                  <SelectItem value="other">Other</SelectItem>
-                  <SelectItem value="none">No current system</SelectItem>
-                </SelectContent>
-              </Select>
+              <Label htmlFor="businessName">Business Name *</Label>
+              <Input
+                id="businessName"
+                type="text"
+                value={formData.businessName}
+                onChange={(e) => handleInputChange("businessName", e.target.value)}
+                placeholder="Your Business Name"
+                required
+              />
             </div>
+          </div>
 
-            <Button 
-              type="submit" 
-              size="lg" 
-              className="w-full" 
-              disabled={isLoading}
-              variant="cta"
-            >
-              {isLoading ? "Processing..." : `Get Started with ${selectedTier.name}`}
-            </Button>
+          <div className="space-y-2">
+            <Label htmlFor="website">Business Website</Label>
+            <Input
+              id="website"
+              type="url"
+              value={formData.website}
+              onChange={(e) => handleInputChange("website", e.target.value)}
+              placeholder="https://yourbusiness.com"
+            />
+          </div>
 
-            <p className="text-sm text-muted-foreground text-center">
-              We'll contact you within 24 hours to set up your account and get you started.
-            </p>
-          </form>
-        </div>
-      </div>
-    </div>
+          <div className="grid md:grid-cols-2 gap-4">
+            <div className="space-y-2">
+              <Label htmlFor="email">Email Address *</Label>
+              <Input
+                id="email"
+                type="email"
+                value={formData.email}
+                onChange={(e) => handleInputChange("email", e.target.value)}
+                placeholder="john@business.com"
+                required
+              />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="phone">Phone Number *</Label>
+              <Input
+                id="phone"
+                type="tel"
+                value={formData.phone}
+                onChange={(e) => handleInputChange("phone", e.target.value)}
+                placeholder="+1 (555) 123-4567"
+                required
+              />
+            </div>
+          </div>
+
+          <div className="space-y-2">
+            <Label htmlFor="bookingSystem">Current Booking System</Label>
+            <Select value={formData.bookingSystem} onValueChange={(value) => handleInputChange("bookingSystem", value)}>
+              <SelectTrigger>
+                <SelectValue placeholder="Select your current booking system" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="google-calendar">Google Calendar</SelectItem>
+                <SelectItem value="outlook">Outlook Calendar</SelectItem>
+                <SelectItem value="calendly">Calendly</SelectItem>
+                <SelectItem value="acuity">Acuity Scheduling</SelectItem>
+                <SelectItem value="square">Square Appointments</SelectItem>
+                <SelectItem value="other">Other</SelectItem>
+                <SelectItem value="none">No current system</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+
+          <Button 
+            type="submit" 
+            size="lg" 
+            className="w-full" 
+            disabled={isLoading}
+            variant="cta"
+          >
+            {isLoading ? "Processing..." : `Get Started with ${selectedTier.name}`}
+          </Button>
+
+          <p className="text-sm text-muted-foreground text-center">
+            We'll contact you within 24 hours to set up your account and get you started.
+          </p>
+        </form>
+      </DialogContent>
+    </Dialog>
   );
 };
 

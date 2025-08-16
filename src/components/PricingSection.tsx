@@ -1,5 +1,7 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
+import TierSignupForm from "@/components/TierSignupForm";
 const plans = [{
   name: "Starter",
   tagline: "Essentials",
@@ -41,6 +43,11 @@ const plans = [{
   popular: true
 }];
 const PricingSection = () => {
+  const [selectedTier, setSelectedTier] = useState<"starter" | "pro" | "premium" | null>(null);
+  
+  const handleTierSelect = (tier: "starter" | "pro" | "premium") => {
+    setSelectedTier(tier);
+  };
   return <section id="pricing" className="py-24 bg-background">
       <div className="container mx-auto px-6">
         <div className="text-center space-y-4 mb-16">
@@ -95,12 +102,20 @@ const PricingSection = () => {
                     </li>)}
                 </ul>
                 
-                <Button variant={plan.popular ? "cta" : "outline"} size="lg" className="w-full" onClick={() => window.location.href = plan.cta.href}>
+                <Button variant={plan.popular ? "cta" : "outline"} size="lg" className="w-full" onClick={() => handleTierSelect(plan.name.toLowerCase() as "starter" | "pro" | "premium")}>
                   {plan.cta.label}
                 </Button>
               </div>
             </div>)}
         </div>
+        
+        {selectedTier && (
+          <TierSignupForm 
+            tier={selectedTier} 
+            open={!!selectedTier} 
+            onOpenChange={(open) => !open && setSelectedTier(null)} 
+          />
+        )}
       </div>
     </section>;
 };
