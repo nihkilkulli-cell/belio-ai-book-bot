@@ -184,7 +184,7 @@ const TierSignupForm = ({ tier, open, onOpenChange }: TierSignupFormProps) => {
             <Label htmlFor="website">Business Website</Label>
             <Input
               id="website"
-              type="url"
+              type="text"
               value={formData.website}
               onChange={(e) => handleInputChange("website", e.target.value)}
               placeholder="https://yourbusiness.com"
