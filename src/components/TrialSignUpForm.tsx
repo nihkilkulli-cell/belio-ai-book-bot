@@ -56,8 +56,19 @@ export const TrialSignUpForm = ({ open, onOpenChange }: TrialSignUpFormProps) =>
     }
 
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      // Send data to webhook
+      await fetch("https://voxwarelabs.app.n8n.cloud/webhook/ed9807bc-aae1-4b23-bd25-8c48795e6855", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        mode: "no-cors",
+        body: JSON.stringify({
+          ...formData,
+          timestamp: new Date().toISOString(),
+          source: "belio-ai-trial-signup"
+        }),
+      });
       
       toast({
         title: "Trial Started!",
