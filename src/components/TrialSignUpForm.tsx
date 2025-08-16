@@ -56,19 +56,29 @@ export const TrialSignUpForm = ({ open, onOpenChange }: TrialSignUpFormProps) =>
     }
 
     try {
+      console.log("Sending data to webhook:", formData);
+      
       // Send data to webhook
-      await fetch("https://voxwarelabs.app.n8n.cloud/webhook/ed9807bc-aae1-4b23-bd25-8c48795e6855", {
+      const response = await fetch("https://voxwarelabs.app.n8n.cloud/webhook/ed9807bc-aae1-4b23-bd25-8c48795e6855", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        mode: "no-cors",
+        
         body: JSON.stringify({
           ...formData,
           timestamp: new Date().toISOString(),
           source: "belio-ai-trial-signup"
         }),
       });
+
+      console.log("Webhook response status:", response.status);
+      
+      if (!response.ok) {
+        throw new Error(`Webhook request failed with status: ${response.status}`);
+      }
+      
+      console.log("Webhook request successful");
       
       toast({
         title: "Trial Started!",
@@ -86,6 +96,7 @@ export const TrialSignUpForm = ({ open, onOpenChange }: TrialSignUpFormProps) =>
         bookingSystem: ""
       });
     } catch (error) {
+      console.error("Webhook error:", error);
       toast({
         title: "Something went wrong",
         description: "Please try again or contact support.",
