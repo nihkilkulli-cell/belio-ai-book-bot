@@ -15,7 +15,7 @@ const plans = [{
   popular: false
 }, {
   name: "Pro",
-  tagline: "All-in-One Solution",
+  tagline: "Growth Tools",
   setup_fee: "$500",
   monthly_fee: "$399/mo",
   included_minutes: "Pay-as-you-go",
