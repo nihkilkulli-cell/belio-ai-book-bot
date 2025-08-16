@@ -5,7 +5,7 @@ const plans = [{
   tagline: "Essentials",
   setup_fee: "$0",
   monthly_fee: "$199/mo",
-  included_minutes: "200 minutes",
+  included_minutes: "Pay-as-you-go",
   extra_minute_cost: "$0.85/min",
   features: ["24/7 Call Answering & Booking", "Calendar Integration", "Answer FAQs about your services"],
   cta: {
