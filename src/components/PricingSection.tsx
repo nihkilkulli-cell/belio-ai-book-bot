@@ -31,7 +31,7 @@ const plans = [{
   tagline: "All-in-One Solution",
   setup_fee: "$1600",
   monthly_fee: "$799/mo",
-  included_minutes: "Pay-as-you-go",
+  included_minutes: "Unlimited minutes",
   extra_minute_cost: "$0.25/min",
   features: ["Everything in Pro", "Rescheduling & Cancellations", "CRM Integrations (HubSpot, GoHighLevel, ServiceTitan etc)", "Dedicated Account Manager & SLA Support"],
   cta: {
