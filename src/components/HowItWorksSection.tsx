@@ -56,8 +56,8 @@ const HowItWorksSection = () => {
                     {/* Step number and icon */}
                     <div className="flex items-center gap-4">
                       <div className="relative">
-                        <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br from-${step.color}/20 to-${step.color}/10 flex items-center justify-center`}>
-                          <IconComponent className={`w-8 h-8 ${step.color}`} />
+                        <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/20 to-primary/10 flex items-center justify-center">
+                          <IconComponent className="w-8 h-8 text-primary" />
                         </div>
                         <div className="absolute -top-2 -right-2 w-8 h-8 bg-gradient-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-sm">
                           {step.step_number}

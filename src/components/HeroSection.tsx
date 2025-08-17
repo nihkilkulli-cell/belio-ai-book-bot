@@ -53,8 +53,8 @@ const HeroSection = () => {
                 <div className="w-2 h-2 bg-primary rounded-full"></div>
                 <span>14-day money-back guarantee</span>
               </div>
-              <div className="flex items-center gap-2 text-sm text-accent">
-                <div className="w-2 h-2 bg-accent rounded-full animate-pulse"></div>
+              <div className="flex items-center gap-2 text-sm text-secondary">
+                <div className="w-2 h-2 bg-secondary rounded-full animate-pulse"></div>
                 <span className="font-medium">Every missed call = money lost</span>
               </div>
             </div>

@@ -63,8 +63,8 @@ const FeaturesSection = () => {
                 className="bg-card rounded-2xl p-8 shadow-elegant hover:shadow-primary hover:scale-105 transition-all duration-300 border border-border/50"
               >
                 <div className="space-y-4">
-                  <div className={`w-14 h-14 rounded-xl bg-gradient-to-br from-${feature.color}/10 to-${feature.color}/5 flex items-center justify-center`}>
-                    <IconComponent className={`w-7 h-7 ${feature.color}`} />
+                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center">
+                    <IconComponent className="w-7 h-7 text-primary" />
                   </div>
                   
                   <h3 className="text-xl font-semibold text-foreground">

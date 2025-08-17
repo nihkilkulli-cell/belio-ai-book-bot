@@ -6,42 +6,36 @@ const industries = [
     description: "Take reservations, handle takeout orders, answer menu questions",
     icon: Utensils,
     example: "\"Hi, I'd like to make a reservation for 4 people at 7pm tonight\"",
-    color: "text-orange-500"
   },
   {
     name: "Salons & Spas",
     description: "Book appointments, handle cancellations, answer service questions",
     icon: Scissors,
     example: "\"Do you have any openings for a haircut this week?\"",
-    color: "text-pink-500"
   },
   {
     name: "Medical & Dental",
     description: "Schedule appointments, verify insurance, handle basic inquiries",
     icon: Stethoscope,
     example: "\"I need to schedule my annual checkup\"",
-    color: "text-blue-500"
   },
   {
     name: "Contractors & Trades",
     description: "Book estimates, schedule service calls, answer pricing questions",
     icon: Hammer,
     example: "\"I need a quote for bathroom renovation\"",
-    color: "text-yellow-600"
   },
   {
     name: "Auto Services",
     description: "Schedule repairs, book maintenance, handle service inquiries",
     icon: Car,
     example: "\"My car needs an oil change - when's your next opening?\"",
-    color: "text-green-500"
   },
   {
     name: "Real Estate",
     description: "Schedule showings, answer property questions, capture leads",
     icon: Home,
     example: "\"I'd like to schedule a viewing for the house on Oak Street\"",
-    color: "text-purple-500"
   }
 ];
 
@@ -70,8 +64,8 @@ const IndustrySection = () => {
               >
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
-                    <div className={`w-12 h-12 rounded-xl bg-gradient-to-br from-${industry.color}/10 to-${industry.color}/5 flex items-center justify-center`}>
-                      <IconComponent className={`w-6 h-6 ${industry.color}`} />
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center">
+                      <IconComponent className="w-6 h-6 text-primary" />
                     </div>
                     <h3 className="text-lg font-semibold text-foreground">
                       {industry.name}
