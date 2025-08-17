@@ -227,7 +227,7 @@ export const TrialSignUpForm = ({ open, onOpenChange }: TrialSignUpFormProps) =>
                 Starting Your Trial...
               </>
             ) : (
-              "Start My 14-Day Free Trial"
+              "Start My Free Trial"
             )}
           </Button>
         </form>

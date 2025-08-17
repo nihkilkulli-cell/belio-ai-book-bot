@@ -32,7 +32,7 @@ const faqs = [
   },
   {
     question: "Is there a contract or can I cancel anytime?",
-    answer: "No long-term contracts required. You can cancel anytime with 30 days notice. We're confident you'll love the results, which is why we offer a 14-day money-back guarantee."
+    answer: "No long-term contracts required. You can cancel anytime with 30 days notice. We believe in earning your business every month through results."
   },
   {
     question: "How much revenue could I actually gain?",

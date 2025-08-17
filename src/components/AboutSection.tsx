@@ -43,7 +43,7 @@ const AboutSection = () => {
             Built by small business owners, for small business owners who understand every dollar counts
           </p>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto mt-6">
-            Founded in Canada and serving 500+ small businesses across North America. We know the challenges of running a small business - tight budgets, wearing multiple hats, and losing customers to bigger competitors. Our AI receptionist levels the playing field, giving you enterprise-level customer service at a fraction of the cost.
+            Founded in Canada with a deep understanding of small business challenges - tight budgets, wearing multiple hats, and competing against bigger companies. Our AI receptionist levels the playing field, giving you enterprise-level customer service at a fraction of the cost.
           </p>
         </div>
         

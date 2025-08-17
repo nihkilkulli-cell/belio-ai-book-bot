@@ -51,7 +51,7 @@ const HeroSection = () => {
               </div>
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <div className="w-2 h-2 bg-primary rounded-full"></div>
-                <span>14-day money-back guarantee</span>
+                <span>No setup fees or contracts</span>
               </div>
               <div className="flex items-center gap-2 text-sm text-secondary">
                 <div className="w-2 h-2 bg-secondary rounded-full animate-pulse"></div>
