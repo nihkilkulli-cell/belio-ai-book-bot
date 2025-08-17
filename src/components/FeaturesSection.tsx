@@ -2,38 +2,38 @@ import { Phone, Calendar, MessageSquare, Clock, Shield, FileText, Users, Bell } 
 
 const features = [
   { 
-    title: "24/7 Call Answering", 
-    description: "Never miss a client inquiry, day or night.",
+    title: "Never Lose Another Customer to Voicemail", 
+    description: "Your AI answers every call instantly, even when you're busy with other customers or closed for the day.",
     icon: Phone,
     color: "text-primary"
   },
   { 
-    title: "Live Appointment Booking", 
-    description: "Instantly books into your existing calendar or booking system like Google Calendar, Outlook, Calendly, or any platform you use.",
+    title: "Turn Every Call Into Revenue - Even at 2AM", 
+    description: "Books appointments automatically into your existing system. Works with Google Calendar, Outlook, Square, and 50+ booking platforms.",
     icon: Calendar,
     color: "text-secondary"
   },
   { 
-    title: "Rescheduling & Cancellations", 
-    description: "Handles changes automatically without human intervention.",
+    title: "Handle Changes Without Lifting a Finger", 
+    description: "Customers can reschedule or cancel on their own. Your AI updates everything automatically, no staff time wasted.",
     icon: Clock,
     color: "text-accent"
   },
   { 
-    title: "Customer Query Handling", 
-    description: "Answers common questions about your services, pricing, and availability automatically.",
+    title: "Answer Common Questions So You Don't Have To", 
+    description: "\"What are your prices?\" \"Are you open Sunday?\" \"Do you take insurance?\" Your AI handles it all with your custom responses.",
     icon: MessageSquare,
     color: "text-primary"
   },
   { 
-    title: "Call Summaries", 
-    description: "Receive detailed call summaries including caller intent and follow-ups.",
+    title: "Know Exactly What Each Customer Wants", 
+    description: "Get detailed summaries of every call with customer intent, contact info, and follow-up actions needed.",
     icon: FileText,
     color: "text-secondary"
   },
   { 
-    title: "Automated Reminders", 
-    description: "Sends SMS/email reminders to reduce no-shows and keep your schedule full.",
+    title: "Reduce No-Shows by 60%", 
+    description: "Automatic SMS and email reminders keep your schedule full and your revenue predictable.",
     icon: Bell,
     color: "text-primary"
   }
@@ -46,11 +46,11 @@ const FeaturesSection = () => {
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold">
             <span className="bg-gradient-primary bg-clip-text text-transparent">
-              Top Features
+              Stop Leaving Money on the Table
             </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Everything you need to never miss a booking and delight your customers
+            Every feature designed to capture more customers and grow your small business revenue
           </p>
         </div>
         

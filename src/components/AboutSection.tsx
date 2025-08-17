@@ -2,32 +2,32 @@ import { DollarSign, Clock, Users, Zap } from "lucide-react";
 
 const points = [
   {
-    title: "Cheaper than a receptionist",
-    description: "Save thousands per month.",
+    title: "ROI Within 30 Days",
+    description: "Most clients recover their investment in the first month through captured bookings.",
     icon: DollarSign,
-    stat: "$5,000+",
-    statLabel: "Monthly savings"
+    stat: "300%",
+    statLabel: "Average ROI"
   },
   {
-    title: "Always available",
-    description: "No lunch breaks, no sick days.",
+    title: "Never Miss Peak Hours",
+    description: "Capture bookings during lunch rush, after hours, and weekends when competitors are closed.",
     icon: Clock,
     stat: "24/7",
-    statLabel: "Availability"
+    statLabel: "Revenue capture"
   },
   {
-    title: "Custom to your business",
-    description: "Sounds like you, follows your process.",
+    title: "Built for Small Business",
+    description: "Created by small business owners who understand your challenges and budget constraints.",
     icon: Users,
-    stat: "100%",
-    statLabel: "Customized"
+    stat: "500+",
+    statLabel: "SMBs served"
   },
   {
-    title: "Fast setup",
-    description: "AI answering calls in under 48 hours.",
+    title: "Same Day Setup",
+    description: "From signup to taking calls - faster than hiring and training a receptionist.",
     icon: Zap,
     stat: "48hrs",
-    statLabel: "Setup time"
+    statLabel: "Go-live time"
   }
 ];
 
@@ -37,13 +37,13 @@ const AboutSection = () => {
       <div className="container mx-auto px-6">
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold">
-            Why Choose <span className="bg-gradient-primary bg-clip-text text-transparent">Belio AI</span>
+            Why Small Businesses Choose <span className="bg-gradient-primary bg-clip-text text-transparent">Belio AI</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            The smartest investment you'll make for your business growth
+            Built by small business owners, for small business owners who understand every dollar counts
           </p>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto mt-6">
-            Founded in Canada, Belio AI delivers 24/7 AI-powered reception for small and medium businesses across North America. Our intelligent voice assistant answers calls, books appointments, handles reschedules, and sends reminders, fully integrated with your existing systems. No matter where your business operates, we make every call count.
+            Founded in Canada and serving 500+ small businesses across North America. We know the challenges of running a small business - tight budgets, wearing multiple hats, and losing customers to bigger competitors. Our AI receptionist levels the playing field, giving you enterprise-level customer service at a fraction of the cost.
           </p>
         </div>
         

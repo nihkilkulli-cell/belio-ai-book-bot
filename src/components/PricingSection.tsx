@@ -53,11 +53,11 @@ const PricingSection = () => {
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold">
             <span className="bg-gradient-primary bg-clip-text text-transparent">
-              Simple, Transparent Pricing for Your Business
+              Costs Less Than a Part-Time Employee
             </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            No upfront fees for Starter. Predictable monthly costs. Start getting value immediately.
+            Book just 3 extra appointments per month and Belio pays for itself. No benefits, no sick days, no lunch breaks.
           </p>
         </div>
         

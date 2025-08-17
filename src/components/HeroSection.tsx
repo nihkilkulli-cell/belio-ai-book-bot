@@ -18,17 +18,17 @@ const HeroSection = () => {
             <div className="space-y-6">
               <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
                 <span className="bg-gradient-hero bg-clip-text text-transparent">
-                  Never Miss
+                  Stop Losing Customers
                 </span>
                 <br />
                 <span className="text-foreground">
-                  a Booking Again
+                  After Hours
                 </span>
               </h1>
               
               <p className="text-xl text-muted-foreground leading-relaxed max-w-lg">
-                Belio AI gives you a 24/7 AI receptionist that answers calls, books appointments, 
-                and grows your business while you sleep.
+                Your AI receptionist never sleeps. Perfect for restaurants, salons, clinics, contractors, and service businesses.
+                <span className="block mt-2 text-primary font-semibold">Capture 40% more bookings with zero additional staff costs.</span>
               </p>
             </div>
             
@@ -39,19 +39,23 @@ const HeroSection = () => {
                 className="group" 
                 onClick={() => setIsTrialFormOpen(true)}
               >
-                Start Your 14-Day Free Trial Today
+                Get My AI Receptionist
                 <ArrowRight className="group-hover:translate-x-1 transition-transform" />
               </Button>
             </div>
             
-            <div className="flex items-center gap-6 pt-4">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 pt-4">
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
                 <span>Live in 48 hours</span>
               </div>
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <div className="w-2 h-2 bg-primary rounded-full"></div>
-                <span>No setup fees</span>
+                <span>14-day money-back guarantee</span>
+              </div>
+              <div className="flex items-center gap-2 text-sm text-accent">
+                <div className="w-2 h-2 bg-accent rounded-full animate-pulse"></div>
+                <span className="font-medium">Every missed call = money lost</span>
               </div>
             </div>
           </div>
