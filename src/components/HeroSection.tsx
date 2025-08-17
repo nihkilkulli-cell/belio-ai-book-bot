@@ -39,7 +39,7 @@ const HeroSection = () => {
                 className="group" 
                 onClick={() => setIsTrialFormOpen(true)}
               >
-                Get My AI Receptionist
+                Start Free Trial
                 <ArrowRight className="group-hover:translate-x-1 transition-transform" />
               </Button>
             </div>
