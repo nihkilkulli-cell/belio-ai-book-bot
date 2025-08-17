@@ -19,8 +19,8 @@ const points = [
     title: "Built for Small Business",
     description: "Created by small business owners who understand your challenges and budget constraints.",
     icon: Users,
-    stat: "500+",
-    statLabel: "SMBs served"
+    stat: "Ready",
+    statLabel: "For your business"
   },
   {
     title: "Same Day Setup",
